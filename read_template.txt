@@ -1,0 +1,32 @@
+file=open("thefiletocreate.txt","w+")
+
+#opening the problem set
+with open("alreadycreatedfile.txt") as task:
+    #reading line by line the values
+    T=int(task.readline()) #first line read
+    for cc in range(T): #looping using the value from the first line
+        n,k=[int(i) for i in map(int,task.readline().split())] #reading N and K
+        arr=[int(i) for i in map(int,task.readline().split())] #reading the arr
+
+        #writing our outputs to a new file
+        file.write(solve(arr,n,k))
+
+#closing the created output file    
+file.close()
+
+
+
+file=open("output.txt","w+")
+
+#opening the problem set
+with open("Problem-1.txt") as task:
+    #reading line by line the values
+    T=int(task.readline()) #first line read
+    for cc in range(T): #looping using the value from the first line
+        k=[int(i) for i in map(int,task.readline().split())] #reading N 
+        
+        #writing our outputs to a new file
+        file.write(getBiggest(k)+"\n");
+
+#closing the created output file    
+file.close()
